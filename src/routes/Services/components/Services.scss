@@ -1,0 +1,68 @@
+@import '../../../styles/variables/measures';
+
+$service_title_line_height: 50px;
+$featured_service_padding: 10px;
+
+div.services > div.main {
+  text-align: center;
+
+  @media screen and (max-width: $break_phone) {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: $break_phone) and (max-width: $break_tablet) {
+    margin-bottom: 5px;
+  }
+  @media screen and (min-width: $break_tablet) and (max-width: $break_desktop) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $break_desktop) {
+    margin-bottom: 20px;
+  }
+
+  div.service {
+    span {
+      display: block;
+    }
+
+    span.title {
+      font-size: xx-large;
+      line-height: $service_title_line_height;
+    }
+  }
+}
+
+div.services > div.featured {
+  display: block;
+
+  div.service {
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    padding: $featured_service_padding;
+
+    @media screen and (max-width: $break_phone) {
+      width: 100%;
+    }
+    @media screen and (min-width: $break_phone) and (max-width: $break_tablet) {
+      width: 100%;
+    }
+    @media screen and (min-width: $break_tablet) and (max-width: $break_desktop) {
+      width: 50%;
+    }
+    @media screen and (min-width: $break_desktop) {
+      width: 25%;
+    }
+
+    div.imageloader > img {
+      width: 100%;
+    }
+
+    span {
+      display: block;
+    }
+
+    span.title {
+      font-size: x-large;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+// Header
+div#header {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: $text_light_color;
+  background-color: $header_color;
+
+  a {
+    text-decoration: none;
+    color: $text_light_color;
+  }
+
+  @media screen and (max-width: $break_phone) {
+    padding: 5px;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: $break_phone) and (max-width: $break_tablet) {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  @media screen and (min-width: $break_tablet) and (max-width: $break_desktop) {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    div.locale_switch {
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      margin-right: 5px;
+    }
+  }
+  @media screen and (min-width: $break_desktop) {
+    padding: 10px;
+    margin-bottom: 20px;
+
+    div.locale_switch {
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      margin-right: 5px;
+    }
+  }
+}
+.route--active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+// Footer
+div#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: $text_light_color;
+  background-color: $footer_color;
+
+  @media screen and (max-width: $break_phone) {
+    padding: 5px;
+
+    span {
+      display: block;
+      margin: 0 2px;
+    }
+  }
+  @media screen and (min-width: $break_phone) and (max-width: $break_tablet) {
+    padding: 5px;
+
+    span {
+      margin: 0 5px;
+    }
+  }
+  @media screen and (min-width: $break_tablet) and (max-width: $break_desktop) {
+    padding: 10px;
+
+    span {
+      margin: 0 10px;
+    }
+  }
+  @media screen and (min-width: $break_desktop) {
+    padding: 10px;
+
+    span {
+      margin: 0 20px;
+    }
+  }
+}
+
+// Checkbox
+div.filters {
+  div.filter {
+    display: inline-block;
+    cursor: pointer;
+
+    & > * {
+      cursor: pointer;
+    }
+
+    input[type=checkbox] {
+      float: left;
+      margin-right: 4px;
+    }
+  }
+}

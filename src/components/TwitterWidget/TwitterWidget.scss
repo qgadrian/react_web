@@ -1,0 +1,10 @@
+@import '../../styles/variables/measures';
+@import '../../styles/variables/colors';
+
+// Twitter component
+$twitter_widget_border: 1px;
+
+div.tweets {
+  overflow: scroll;
+  border: $twitter_widget_border solid $twitter_secondary_color;
+}

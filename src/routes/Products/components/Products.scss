@@ -1,0 +1,42 @@
+@import '../../../styles/variables/measures';
+
+$product_title_line_height: 50px;
+
+div.products > div.product {
+  text-align: center;
+
+  span {
+    display: block;
+  }
+
+  span.title {
+    font-size: x-large;
+    line-height: $product_title_line_height;
+  }
+
+  div.loading {
+    height: auto;
+    width: 100%;
+  }
+
+  div.imageloader {
+    img {
+      height: auto;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (max-width: $break_phone) {
+    padding: 5px;
+  }
+  @media screen and (min-width: $break_phone) and (max-width: $break_tablet) {
+    padding: 5px;
+  }
+  @media screen and (min-width: $break_tablet) and (max-width: $break_desktop) {
+    padding: 10px;
+  }
+  @media screen and (min-width: $break_desktop) {
+    padding: 20px;
+  }
+}

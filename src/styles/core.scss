@@ -1,0 +1,53 @@
+@import 'base';
+@import '~normalize.css/normalize';
+
+$font: normal 1rem Helvetica, Roboto, Calibri, Arial, sans-serif;
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font: $font;
+
+  div#container {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    background: url('../../public/imgs/home_background.jpg');
+    background-size: cover;
+
+    & > div#content {
+      min-height: 100vh;
+      margin: 0 auto auto auto;
+      background-color: $background_color;
+
+      @media screen and (max-width: $break_phone) {
+        width: 100%;
+        padding: 100px 0;
+      }
+      @media screen and (min-width: $break_phone) and (max-width: $break_tablet) {
+        width: 80%;
+        padding: 60px 10px;
+      }
+      @media screen and (min-width: $break_tablet) and (max-width: $break_desktop) {
+        width: 80%;
+        padding: 60px 20px;
+      }
+      @media screen and (min-width: $break_desktop) {
+        width: 60%;
+        padding: 50px 20px;
+      }
+    }
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

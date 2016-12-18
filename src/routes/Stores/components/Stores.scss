@@ -1,0 +1,43 @@
+@import '../../../styles/variables/measures';
+@import '../../../styles/variables/colors';
+
+div.stores {
+
+  div.filters {
+    // border: 1px solid $secondary_dark_color;
+    margin-bottom: 10px;
+
+    span.title {
+      font-size: x-large;
+      display: block;
+      border-bottom: 1px solid $secondary_dark_color;
+    }
+
+    div.group {
+      padding: 5px;
+
+      div.title {
+        padding-bottom: 5px;
+      }
+
+      div.wrapper {
+        div.filter {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $break_phone) {
+      padding: 5px;
+    }
+    @media screen and (min-width: $break_phone) and (max-width: $break_tablet) {
+      padding: 5px;
+    }
+    @media screen and (min-width: $break_tablet) and (max-width: $break_desktop) {
+      padding: 10px;
+    }
+    @media screen and (min-width: $break_desktop) {
+      padding: 15px;
+    }
+  }
+}
